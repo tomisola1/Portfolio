@@ -1,9 +1,22 @@
-import React, { useState } from "react";
+import React, { useEffect, useState } from "react";
 import { FaBars, FaTimes } from "react-icons/fa";
+import { BsSun, BsFillMoonStarsFill } from "react-icons/bs";
 import { Link } from "react-scroll";
 
 const NavBar = () => {
   const [nav, setNav] = useState(false);
+  const [theme, setTheme] = useState("dark");
+
+  const themeChange = () => {
+    if (theme === "light") {
+      setTheme("dark");
+    } else {
+      setTheme("light");
+    }
+  };
+  useEffect(() => {
+    document.body.className = theme;
+  }, [theme]);
 
   const links = [
     {
@@ -29,12 +42,17 @@ const NavBar = () => {
   ];
 
   return (
-    <div className="flex justify-between items-center w-full h-20 px-4 text-white bg-slate-900 fixed">
+    <div
+      className={`${theme} flex justify-between items-center w-full h-20 px-4 text-white bg-slate-900 fixed`}
+    >
       <div>
         <h1 className="text-5xl font-cursive ml-2 text-pink-500">Tomisola</h1>
       </div>
 
       <ul className="hidden md:flex">
+        <button className="bg-slate-700 p-2 rounded-md" onClick={themeChange}>
+          <BsSun />
+        </button>
         {links.map(({ id, link }) => (
           <li
             key={id}
@@ -71,6 +89,9 @@ const NavBar = () => {
               </Link>
             </li>
           ))}
+          <button className="bg-slate-700 p-2 rounded-md text-stone-300">
+            <BsSun />
+          </button>
         </ul>
       )}
     </div>
