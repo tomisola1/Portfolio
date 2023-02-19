@@ -1,13 +1,16 @@
-import React from "react";
+import React, { useContext } from "react";
 import HeroImage from "../assets/HeroImage.png";
 import { MdOutlineKeyboardArrowRight } from "react-icons/md";
 import { Link } from "react-scroll";
+import ThemeContext from "../context/ThemeContext";
 
 const Home = () => {
+  const { theme } = useContext(ThemeContext);
+
   return (
     <div
       name="home"
-      className="h-screen w-full bg-gradient-to-b from-slate-900 via-slate-900 to-slate-800"
+      className={`${theme} h-screen w-full bg-gradient-to-b from-slate-900 via-slate-900 to-slate-800`}
     >
       <div className="max-w-screen-lg mx-auto flex flex-col items-center justify-center h-full px-4 pt-36 md:flex-row sm:pt-72 md:pt-28">
         <div className="flex flex-col justify-center h-full mr-10">

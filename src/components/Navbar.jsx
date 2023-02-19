@@ -1,22 +1,13 @@
-import React, { useEffect, useState } from "react";
+import React, { useContext, useEffect, useState } from "react";
 import { FaBars, FaTimes } from "react-icons/fa";
 import { BsSun, BsFillMoonStarsFill } from "react-icons/bs";
 import { Link } from "react-scroll";
+import ThemeContext from "../context/ThemeContext";
 
 const NavBar = () => {
   const [nav, setNav] = useState(false);
-  const [theme, setTheme] = useState("dark");
 
-  const themeChange = () => {
-    if (theme === "light") {
-      setTheme("dark");
-    } else {
-      setTheme("light");
-    }
-  };
-  useEffect(() => {
-    document.body.className = theme;
-  }, [theme]);
+  const { theme, themeChange } = useContext(ThemeContext);
 
   const links = [
     {
@@ -50,9 +41,15 @@ const NavBar = () => {
       </div>
 
       <ul className="hidden md:flex">
-        <button className="bg-slate-700 p-2 rounded-md" onClick={themeChange}>
-          <BsSun />
-        </button>
+        {theme === "dark" ? (
+          <button className="bg-slate-700 p-2 rounded-md" onClick={themeChange}>
+            <BsSun />
+          </button>
+        ) : (
+          <button className="bg-pink-400 p-2 rounded-md" onClick={themeChange}>
+            <BsFillMoonStarsFill />
+          </button>
+        )}
         {links.map(({ id, link }) => (
           <li
             key={id}
@@ -73,11 +70,13 @@ const NavBar = () => {
       </div>
 
       {nav && (
-        <ul className="flex flex-col justify-center items-center absolute top-0 left-0 w-full h-screen bg-gradient-to-b from-slate-900 to-slate-800 text-gray-500">
+        <ul
+          className={`flex flex-col justify-center items-center absolute top-0 left-0 w-full h-screen bg-gradient-to-b from-slate-900 to-slate-800 text-gray-500`}
+        >
           {links.map(({ id, link }) => (
             <li
               key={id}
-              className="px-4 cursor-pointer capitalize py-6 text-4xl"
+              className={`${theme} px-4 cursor-pointer capitalize py-6 text-4xl`}
             >
               <Link
                 onClick={() => setNav(!nav)}
@@ -89,9 +88,21 @@ const NavBar = () => {
               </Link>
             </li>
           ))}
-          <button className="bg-slate-700 p-2 rounded-md text-stone-300">
-            <BsSun />
-          </button>
+          {theme === "dark" ? (
+            <button
+              className="bg-slate-700 p-2 rounded-md"
+              onClick={themeChange}
+            >
+              <BsSun />
+            </button>
+          ) : (
+            <button
+              className="bg-pink-400 p-2 rounded-md"
+              onClick={themeChange}
+            >
+              <BsFillMoonStarsFill />
+            </button>
+          )}
         </ul>
       )}
     </div>
