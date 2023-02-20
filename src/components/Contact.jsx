@@ -5,13 +5,8 @@ const Contact = () => {
   const { theme, headings } = useContext(ThemeContext);
 
   return (
-    <div
-      name="contact"
-      className={`w-full h-screen bg-gradient-to-b from-slate-900 to-slate-800 text-white`}
-    >
-      <div
-        className={`${theme} flex flex-col p-4 pt-60 md:pt-0 justify-center max-w-screen-lg mx-auto h-full`}
-      >
+    <div name="contact" className={`${theme} w-full h-screen text-white`}>
+      <div className="flex flex-col p-4 pt-60 md:pt-0 justify-center max-w-screen-lg mx-auto h-full">
         <div className="pb-8">
           <p
             className={`${headings} text-4xl font-bold inline border-b-4 border-gray-500`}

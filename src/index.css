@@ -11,9 +11,13 @@
     font-family: "Raleway", sans-serif;
   }
 }
+.dark {
+  background-color: #0f1930;
+}
+
 .light {
   background-color: #fbf8f5;
-  color: #9ca3af;
+  color: #424242;
 }
 .darkHeading {
   color: #0f172a;

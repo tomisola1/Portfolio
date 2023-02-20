@@ -34,20 +34,20 @@ const NavBar = () => {
 
   return (
     <div
-      className={`${theme} flex justify-between items-center w-full h-20 px-4 text-white bg-slate-900 fixed`}
+      className={`${theme} navbar flex justify-between items-center w-full h-20 px-4 text-white bg-slate-900 fixed`}
     >
       <div>
         <h1 className="text-5xl font-cursive ml-2 text-pink-500">Tomisola</h1>
       </div>
 
-      <ul className={`${theme} hidden md:flex`}>
+      <ul className="hidden md:flex">
         {theme === "dark" ? (
           <button className="bg-slate-700 p-2 rounded-md" onClick={themeChange}>
             <BsSun />
           </button>
         ) : (
           <button className="bg-pink-400 p-2 rounded-md" onClick={themeChange}>
-            <BsFillMoonStarsFill />
+            <BsFillMoonStarsFill fill="white" />
           </button>
         )}
         {links.map(({ id, link }) => (
@@ -71,12 +71,12 @@ const NavBar = () => {
 
       {nav && (
         <ul
-          className={`${theme} flex flex-col justify-center items-center absolute top-0 left-0 w-full h-screen bg-gradient-to-b from-slate-900 to-slate-800 text-gray-500`}
+          className={`${theme} flex flex-col justify-center items-center absolute top-0 left-0 w-full h-screen text-gray-500`}
         >
           {links.map(({ id, link }) => (
             <li
               key={id}
-              className={`${theme} px-4 cursor-pointer capitalize py-6 text-4xl`}
+              className="px-4 cursor-pointer capitalize py-6 text-4xl"
             >
               <Link
                 onClick={() => setNav(!nav)}
@@ -97,10 +97,10 @@ const NavBar = () => {
             </button>
           ) : (
             <button
-              className="bg-pink-400 p-2 rounded-md text-white"
+              className="bg-pink-400 p-2 rounded-md"
               onClick={themeChange}
             >
-              <BsFillMoonStarsFill />
+              <BsFillMoonStarsFill fill="white" />
             </button>
           )}
         </ul>

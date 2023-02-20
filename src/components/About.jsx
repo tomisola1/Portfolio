@@ -5,13 +5,8 @@ const About = () => {
   const { theme, headings } = useContext(ThemeContext);
 
   return (
-    <div
-      name="about"
-      className={`${theme} w-full h-screen bg-gradient-to-b from-slate-800 to-slate-900 text-white`}
-    >
-      <div
-        className={`${theme} max-w-screen-lg p-4 pt-48 md:pt-0 mx-auto flex flex-col justify-center w-full h-full`}
-      >
+    <div name="about" className={`${theme} w-full h-screen text-white`}>
+      <div className="max-w-screen-lg p-4 pt-48 md:pt-0 mx-auto flex flex-col justify-center w-full h-full">
         <div className="pb-8">
           <p
             className={`${headings} text-4xl sm:text-6xl font-bold inline border-b-4 border-gray-500`}
