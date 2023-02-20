@@ -12,5 +12,9 @@
   }
 }
 .light {
-  background-color: #faf0e4;
+  background-color: #fbf8f5;
+  color: #9ca3af;
+}
+.darkHeading {
+  color: #0f172a;
 }

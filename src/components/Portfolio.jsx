@@ -1,12 +1,15 @@
-import React from "react";
+import React, { useContext } from "react";
 import business from "../assets/portfolio/Business-landing-page.png";
 import cars from "../assets/portfolio/cars-landing-page.png";
 import githubFinder from "../assets/portfolio/github-finder.png";
 import housing from "../assets/portfolio/Housing-project.png";
 import movieHub from "../assets/portfolio/movie-hub.png";
 import movix from "../assets/portfolio/movix-app.png";
+import ThemeContext from "../context/ThemeContext";
 
 const Portfolio = () => {
+  const { theme, headings } = useContext(ThemeContext);
+
   const portfolios = [
     {
       id: 1,
@@ -51,9 +54,13 @@ const Portfolio = () => {
       name="portfolio"
       className="bg-gradient-to-b from-slate-900 to-slate-800 w-full text-white md:h-screen"
     >
-      <div className="max-w-screen-lg p-4 pt-48 md:pt-0 mx-auto flex flex-col justify-center w-full h-full">
+      <div
+        className={`${theme} max-w-screen-lg p-4 pt-48 md:pt-0 mx-auto flex flex-col justify-center w-full h-full`}
+      >
         <div className="pb-8">
-          <p className="text-4xl font-bold inline border-b-4 border-gray-500">
+          <p
+            className={`${headings} text-4xl font-bold inline border-b-4 border-gray-500`}
+          >
             Portfolio
           </p>
           <p className="py-6">Check out some of my work right here</p>

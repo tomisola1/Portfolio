@@ -4,12 +4,15 @@ const ThemeContext = createContext();
 
 export const ThemeProvider = ({ children }) => {
   const [theme, setTheme] = useState("dark");
+  const [headings, setHeadings] = useState("");
 
   const themeChange = () => {
     if (theme === "light") {
       setTheme("dark");
+      setHeadings("");
     } else {
       setTheme("light");
+      setHeadings("darkHeading");
     }
   };
 
@@ -19,7 +22,7 @@ export const ThemeProvider = ({ children }) => {
   }, [theme]);
 
   return (
-    <ThemeContext.Provider value={{ theme, themeChange }}>
+    <ThemeContext.Provider value={{ theme, headings, themeChange }}>
       {children}
     </ThemeContext.Provider>
   );

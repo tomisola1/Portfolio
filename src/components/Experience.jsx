@@ -5,8 +5,12 @@ import reactImage from "../assets/react.png";
 import nextjs from "../assets/nextjs.png";
 import github from "../assets/github.png";
 import tailwind from "../assets/tailwind.png";
+import { useContext } from "react";
+import ThemeContext from "../context/ThemeContext";
 
 const Experience = () => {
+  const { theme, headings } = useContext(ThemeContext);
+
   const techs = [
     {
       id: 1,
@@ -57,9 +61,13 @@ const Experience = () => {
       name="experience"
       className="bg-gradient-to-b from-slate-800 to-slate-900 w-full h-screen"
     >
-      <div className="max-w-screen-lg mx-auto p-4 pt-48 md:pt-0 flex flex-col justify-center w-full h-full text-white">
+      <div
+        className={`${theme} max-w-screen-lg mx-auto p-4 pt-48 md:pt-0 flex flex-col justify-center w-full h-full text-white`}
+      >
         <div>
-          <p className="text-4xl font-bold border-b-4 border-gray-500 p-2 inline">
+          <p
+            className={`${headings} text-4xl font-bold border-b-4 border-gray-500 p-2 inline`}
+          >
             Experience
           </p>
           <p className="py-6">These are the technologies I've worked with</p>

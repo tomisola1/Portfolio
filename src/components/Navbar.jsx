@@ -40,7 +40,7 @@ const NavBar = () => {
         <h1 className="text-5xl font-cursive ml-2 text-pink-500">Tomisola</h1>
       </div>
 
-      <ul className="hidden md:flex">
+      <ul className={`${theme} hidden md:flex`}>
         {theme === "dark" ? (
           <button className="bg-slate-700 p-2 rounded-md" onClick={themeChange}>
             <BsSun />
@@ -71,7 +71,7 @@ const NavBar = () => {
 
       {nav && (
         <ul
-          className={`flex flex-col justify-center items-center absolute top-0 left-0 w-full h-screen bg-gradient-to-b from-slate-900 to-slate-800 text-gray-500`}
+          className={`${theme} flex flex-col justify-center items-center absolute top-0 left-0 w-full h-screen bg-gradient-to-b from-slate-900 to-slate-800 text-gray-500`}
         >
           {links.map(({ id, link }) => (
             <li
@@ -97,7 +97,7 @@ const NavBar = () => {
             </button>
           ) : (
             <button
-              className="bg-pink-400 p-2 rounded-md"
+              className="bg-pink-400 p-2 rounded-md text-white"
               onClick={themeChange}
             >
               <BsFillMoonStarsFill />

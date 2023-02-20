@@ -5,19 +5,23 @@ import { Link } from "react-scroll";
 import ThemeContext from "../context/ThemeContext";
 
 const Home = () => {
-  const { theme } = useContext(ThemeContext);
+  const { theme, headings } = useContext(ThemeContext);
 
   return (
     <div
       name="home"
       className={`${theme} h-screen w-full bg-gradient-to-b from-slate-900 via-slate-900 to-slate-800`}
     >
-      <div className="max-w-screen-lg mx-auto flex flex-col items-center justify-center h-full px-4 pt-36 md:flex-row sm:pt-72 md:pt-28">
+      <div
+        className={`${theme} max-w-screen-lg mx-auto flex flex-col items-center justify-center h-full px-4 pt-36 md:flex-row sm:pt-72 md:pt-28`}
+      >
         <div className="flex flex-col justify-center h-full mr-10">
           <p className="text-gray-400 py-4 max-w-md uppercase">
             hi there 👋🏼 i'm
           </p>
-          <h2 className="text-4xl sm:text-7xl font-bold text-white">
+          <h2
+            className={`${headings} text-4xl sm:text-7xl font-bold text-white`}
+          >
             Oluwatomisola.
           </h2>
           <p className="text-gray-400 py-4 max-w-md">
