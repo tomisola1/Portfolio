@@ -5,6 +5,7 @@ import githubFinder from "../assets/portfolio/github-finder.png";
 import housing from "../assets/portfolio/Housing-project.png";
 import movieHub from "../assets/portfolio/movie-hub.png";
 import movix from "../assets/portfolio/movix-app.png";
+import library from "../assets/portfolio/library.png";
 import ThemeContext from "../context/ThemeContext";
 
 const Portfolio = () => {
@@ -46,6 +47,12 @@ const Portfolio = () => {
       src: movix,
       demolink: "https://movix-web-app.vercel.app",
       code: "https://github.com/tomisola1/Movix-Web-App",
+    },
+    {
+      id: 7,
+      src: library,
+      demolink: "https://library-tomisola1.vercel.app/",
+      code: "https://github.com/tomisola1/Library",
     },
   ];
 
