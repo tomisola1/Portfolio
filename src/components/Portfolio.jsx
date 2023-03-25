@@ -57,8 +57,8 @@ const Portfolio = () => {
   ];
 
   return (
-    <div name="portfolio" className={`${theme} w-full text-white md:h-screen`}>
-      <div className="max-w-screen-lg p-4 pt-48 md:pt-0 mx-auto flex flex-col justify-center w-full h-full">
+    <div name="portfolio" className={`${theme} w-full text-white md:h-auto`}>
+      <div className="max-w-screen-lg p-4 pt-10 mx-auto flex flex-col justify-center w-full h-full">
         <div className="pb-8">
           <p
             className={`${headings} text-4xl font-bold inline border-b-4 border-gray-500`}

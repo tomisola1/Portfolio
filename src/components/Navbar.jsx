@@ -1,4 +1,4 @@
-import React, { useContext, useEffect, useState } from "react";
+import React, { useContext, useState } from "react";
 import { FaBars, FaTimes } from "react-icons/fa";
 import { BsSun, BsFillMoonStarsFill } from "react-icons/bs";
 import { Link } from "react-scroll";

@@ -57,9 +57,9 @@ const Experience = () => {
   ];
 
   return (
-    <div name="experience" className={`${theme} w-full h-screen text-white`}>
-      <div className="max-w-screen-lg mx-auto p-4 pt-48 md:pt-0 flex flex-col justify-center w-full h-full">
-        <div>
+    <div name="experience" className={`${theme} w-full md:h-auto text-white`}>
+      <div className="max-w-screen-lg mx-auto p-4 pt-10 flex flex-col justify-center w-full h-full">
+        <div className="pb-8">
           <p
             className={`${headings} text-4xl font-bold border-b-4 border-gray-500 p-2 inline`}
           >

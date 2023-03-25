@@ -6,7 +6,7 @@ const Contact = () => {
 
   return (
     <div name="contact" className={`${theme} w-full h-screen text-white`}>
-      <div className="flex flex-col p-4 pt-60 md:pt-0 justify-center max-w-screen-lg mx-auto h-full">
+      <div className="flex flex-col p-4 pt-6 justify-center max-w-screen-lg mx-auto h-full">
         <div className="pb-8">
           <p
             className={`${headings} text-4xl font-bold inline border-b-4 border-gray-500`}

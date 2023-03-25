@@ -5,7 +5,7 @@ const About = () => {
   const { theme, headings } = useContext(ThemeContext);
 
   return (
-    <div name="about" className={`${theme} w-full h-screen text-white`}>
+    <div name="about" className={`${theme} w-full h-auto text-white`}>
       <div className="max-w-screen-lg p-4 pt-48 md:pt-0 mx-auto flex flex-col justify-center w-full h-full">
         <div className="pb-8">
           <p
