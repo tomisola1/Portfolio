@@ -1,11 +1,10 @@
 import React, { useContext } from "react";
-import business from "../assets/portfolio/Business-landing-page.png";
+import gaming from "../assets/portfolio/gaming-site.png";
 import cars from "../assets/portfolio/cars-landing-page.png";
 import githubFinder from "../assets/portfolio/github-finder.png";
 import housing from "../assets/portfolio/Housing-project.png";
 import movieHub from "../assets/portfolio/movie-hub.png";
 import movix from "../assets/portfolio/movix-app.png";
-import library from "../assets/portfolio/library.png";
 import ThemeContext from "../context/ThemeContext";
 
 const Portfolio = () => {
@@ -14,9 +13,9 @@ const Portfolio = () => {
   const portfolios = [
     {
       id: 1,
-      src: business,
-      demolink: "https://thunderous-kheer-70af52.netlify.app/",
-      code: "https://github.com/tomisola1/Business-Agency-Website",
+      src: gaming,
+      demolink: "gaming-web.vercel.app",
+      code: "https://github.com/tomisola1/Gaming-web",
     },
     {
       id: 2,
@@ -27,8 +26,8 @@ const Portfolio = () => {
     {
       id: 3,
       src: githubFinder,
-      demolink: "https://github-finder-tomisola1.vercel.app/",
-      code: "https://github.com/tomisola1/Github-Finder",
+      demolink: "https://github-finder-next-ten.vercel.app/",
+      code: "https://github.com/tomisola1/Github-Finder-Next",
     },
     {
       id: 4,
@@ -47,13 +46,7 @@ const Portfolio = () => {
       src: movix,
       demolink: "https://movix-web-app.vercel.app",
       code: "https://github.com/tomisola1/Movix-Web-App",
-    },
-    {
-      id: 7,
-      src: library,
-      demolink: "https://library-tomisola1.vercel.app/",
-      code: "https://github.com/tomisola1/Library",
-    },
+    }
   ];
 
   return (
