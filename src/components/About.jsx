@@ -17,7 +17,7 @@ const About = () => {
 
         <p className="text-md mt-12 md:mt-20 md:text-xl">
           My name is Oluwatomisola Solomon a frontend developer based in Lagos,
-          I have 1 year of experience in developing user-friendly and
+          I have 3 years of experience in developing user-friendly and
           responsive web applications using modern front-end technologies such
           as React, Redux, HTML, CSS, and JavaScript. I have a strong
           understanding of responsive design principles, and I am familiar with
